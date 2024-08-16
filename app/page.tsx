@@ -19,7 +19,7 @@ export default function Home() {
   const [stream, setStream] = useState<MediaStream | null>(null);
   const [canvases, setCanvases] = useState<HTMLCanvasElement[]>([]);
   const maxCanvases = 4;
-  const [background, setBackground] = useState('bg-blue-500')
+  const [background, setBackground] = useState('bg-black')
   const currentDate = new Date();
   const formatDate = (date: Date) => {
     const day = String(date.getDate()).padStart(2, "0");
@@ -124,8 +124,8 @@ export default function Home() {
                   <SelectValue placeholder="Select background" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="bg-blue-500">Light Blue</SelectItem>
                   <SelectItem value="bg-black">Black</SelectItem>
+                  <SelectItem value="bg-blue-500">Light Blue</SelectItem>
                   <SelectItem value="bg-gray-300">White</SelectItem>
                 </SelectContent>
               </Select>
